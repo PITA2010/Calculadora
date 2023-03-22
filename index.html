@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> CALCULADORA </h1>
+    <br>
+    <br>
+    <br>
+    <input id="N°A"> Número A </input>
+    <br>
+    <br>
+    <br>
+    <input id="N°B"> Número B </input>
+    <br>
+    <br>
+    <br>
+    <button id="suma" onclick="suma()">SUMA(+)</button>
+    <h1> Resultado </h1>
+    <input id="ResultadoSuma"></input>
+
+<script>
+    console.log("iniciando mi calculadora")
+
+    function suma () {
+        console.log("Iniciando suma");
+
+        const valorA= document.getElementById("N°A").value;
+        const valorB= document.getElementById("N°B").value;
+        let CampoResultado= document.getElementById("ResultadoSuma");
+
+        if(!valorA || !valorB){
+            CampoResultado.value="Faltan Datos";
+        }
+        if(valorA && valorB){
+            console.log("Procesando el reaultado");
+            console.log("Valor A ->", valorA);
+            console.log("Valor B ->", valorB);
+            CampoResultado.value= Number(valorA) + Number(valorB);
+            console.log("Resultado ->", CampoResultado.value);
+
+        }
+
+    }
+
+
+</script>
+
+</body>
+</html>
